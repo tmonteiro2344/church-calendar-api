@@ -8,7 +8,7 @@ general-en:
     ## and include it like this:
     # - file: universal-en.txt
 
-general-la:
+general-la: &default
   title: Calendarium Romanum Generale
   language: la
   sanctorale:
@@ -32,22 +32,48 @@ general-es:
   sanctorale:
     - packaged: universal-es
 
-us-en: &default
+us: &us
   title: US Calendar
   language: en
   sanctorale:
     - packaged: universal-en
     - packaged: us-en
+  transfer_to_sunday:
+    - ascension
+    - corpus_christi
+
+# The following entries define
+# * common calendar of dioceses of United States
+# * calendars for the specific US Diocese which observe the Ascension on the traditional date of Thursday
+us-ascension: &us-ascension
+  <<: *us
+  title: US Calendar (Boston, Hartford,  New  York,  Newark,  Omaha,  and  Philadelphia)
+  description: These Diocese have  retained  its  celebration  on  the proper Thursday
+  transfer_to_sunday:
+    - corpus_christi
+
+us-boston:
+  <<: *us-ascension
+
+us-hartford:
+  <<: *us-ascension
+
+us-new-york:
+  <<: *us-ascension
+
+us-newark:
+  <<: *us-ascension
+
+us-omaha:
+  <<: *us-ascension
+
+us-philadelphia:
+  <<: *us-ascension
 
 # The following entries define
 # * common calendar of dioceses of Czech Republic
 # * calendars of it's both provinces - Bohemia and Moravia
 # * calendar of each Bohemian and Moravian diocese
-#
-# They are included as demonstration of configuration capabilities.
-# As maintainer of your own API instance you would probably
-# remove them and eventually supply other local calendars.
-
 czech: &czech
   title: Český národní kalendář
   language: cs

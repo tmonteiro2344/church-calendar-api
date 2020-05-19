@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:Lumen-de-Lumine/calendarium-romanum.git
+  remote: https://github.com/Lumen-de-Lumine/calendarium-romanum
   revision: fd86ef2daeae6d43d1f40b1d7d18f667e7920fba
   specs:
     calendarium-romanum (0.6.0)
@@ -133,4 +133,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.13.6
+   1.17.3

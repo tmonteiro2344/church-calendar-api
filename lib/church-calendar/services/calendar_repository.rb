@@ -7,7 +7,6 @@ module ChurchCalendar
     def initialize(config, data_path)
       @calendars = config
       @path = data_path
-
       @sanctorale_loader = CalendariumRomanum::SanctoraleLoader.new
     end
 
@@ -28,8 +27,7 @@ module ChurchCalendar
       end
       sanctorale = CalendariumRomanum::SanctoraleFactory
                    .create_layered(*data)
-      temporale_options = calendar_config['temporale_extensions'] &&
-          build_temporale_options(calendar_config['temporale_extensions'])
+      temporale_options = build_temporale_options(calendar_config)
       factory = CalendariumRomanum::PerpetualCalendar.new sanctorale: sanctorale, temporale_options: temporale_options
 
       CalendarFacade.new factory, calendar_config
@@ -51,12 +49,26 @@ module ChurchCalendar
       end
     end
 
-    def build_temporale_options(extensions)
-      {
-        extensions: extensions.collect do |name|
+    def build_temporale_options(config)
+      options = {}
+
+      extensions = config['temporale_extensions']
+      if extensions
+        options[:extensions] = extensions.collect do |name|
           "CalendariumRomanum::Temporale::Extensions::#{name}".constantize
         end
-      }
+      end
+
+      transfers = config['transfer_to_sunday']
+      if transfers
+        options[:transfer_to_sunday] = transfers.map {|t| t.to_sym}
+      end
+
+      if options.keys.length > 0
+        return options
+      else
+        return nil
+      end
     end
   end
 end

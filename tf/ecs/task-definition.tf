@@ -7,12 +7,12 @@ resource "aws_ecs_task_definition" "main" {
     "name": "api",
     "image": "${var.docker_repo}:${var.docker_tag}",
     "cpu": 256,
-    "memory": 1536,
-    "memoryReservation": 768,
+    "memory": 1024,
+    "memoryReservation": 128,
     "essential": true,
     "portMappings": [
         {
-            "containerPort": 9292,
+            "containerPort": 80,
             "protocol": "tcp"
         }
     ],

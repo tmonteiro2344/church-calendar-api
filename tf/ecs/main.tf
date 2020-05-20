@@ -18,7 +18,7 @@ resource "aws_ecs_service" "main" {
   load_balancer {
     target_group_arn = module.target_group.arn
     container_name   = "api"
-    container_port   = "9292"
+    container_port   = "80"
   }
 
   lifecycle {

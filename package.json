@@ -1,0 +1,28 @@
+{
+  "name": "church-calendar-api",
+  "version": "1.0.1",
+  "description": "Church Calendar API",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "npm run changelog && git add CHANGELOG.md",
+    "postversion": "git push && git push --tags",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lumen-de-Lumine/church-calendar-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lumen-de-Lumine/church-calendar-api/issues"
+  },
+  "homepage": "https://github.com/Lumen-de-Lumine/church-calendar-api#readme",
+  "devDependencies": {
+    "conventional-changelog-cli": "^2.0.34"
+  }
+}

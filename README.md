@@ -24,6 +24,29 @@ Make sure you have Docker installed, then run:
 docker-compose up
 ```
 
+## Local Development of `calendarium-romanum`
+
+If you need to work on the `calendarium-romanum` gem locally you can do so in the following way:
+
+1. Clone down the `calendarium-romanum` app:
+  ```sh
+  git clone git@github.com:Lumen-de-Lumine/calendarium-romanum.git calendarium-romanum
+  ```
+2. Update the following lines in the `docker-compose.yml`
+  ```sh
+  # - ./calendarium-romanum:/home/app/webapp/calendarium-romanum
+  # - .bundle_config:/home/app/webapp/.bundle/config
+  ```
+3. Modify the source of the `calendarium-romanum` and then restart via `docker-compose restart`
+
+In short what the above does is the equivalent of running the following:
+
+```sh
+bundle config --local local.calendarium-romanum /path/to/calendarium-romanum
+```
+
+which allows for local gem modification without modifying the `Gemfile` or `Gemfile.lock` ([read more about this here if desired](https://rossta.net/blog/how-to-specify-local-ruby-gems-in-your-gemfile.html))
+
 ## Running your own instance on Heroku
 
 The application works as is, you only need to create a new application

@@ -3,5 +3,14 @@ services:
   calendar:
     image: church-calendar-api
     build: .
+    volumes:
+      - ./apps:/home/app/webapp/apps
+      - ./config:/home/app/webapp/config
+      - ./data:/home/app/webapp/data
+      - ./lib:/home/app/webapp/lib
+      - ./Gemfile:/home/app/webapp/Gemfile
+      - ./Gemfile.lock:/home/app/webapp/Gemfile.lock
+      # - ./calendarium-romanum:/home/app/webapp/calendarium-romanum
+      # - .bundle_config:/home/app/webapp/.bundle/config
     ports:
       - 9292:80

@@ -7,6 +7,7 @@ module ChurchCalendar
     expose :cycle_sunday
     expose :cycle_ferial
     expose :celebrations, using: Celebration
+    expose :vespers, using: Celebration
     expose :weekday
 
     private

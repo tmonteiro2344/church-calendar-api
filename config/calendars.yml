@@ -47,8 +47,8 @@ us: &us
 # * calendars for the specific US Diocese which observe the Ascension on the traditional date of Thursday
 us-ascension: &us-ascension
   <<: *us
-  title: US Calendar (Boston, Hartford,  New  York,  Newark,  Omaha,  and  Philadelphia)
-  description: These Diocese have  retained  its  celebration  on  the proper Thursday
+  title: US Calendar (Boston, Hartford, New York, Newark, Omaha, and Philadelphia)
+  description: These Diocese have retained its celebration on the proper Thursday
   transfer_to_sunday:
     - corpus_christi
 

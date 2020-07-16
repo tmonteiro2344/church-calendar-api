@@ -1,3 +1,13 @@
+# [1.2.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v1.1.0...v1.2.0) (2020-07-16)
+
+
+### Features
+
+* ***/*:** add ability and documentation to support local development ([c3eaaa4](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/c3eaaa4eb8bd1436b28b49932cca3f8568f63c03))
+* **calendar_facade:** expose vigil liturgies as unique events ([c254fee](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/c254fee9e155fc1cc3631c8851c820dbc5dae445))
+
+
+
 # [1.1.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v1.0.1...v1.1.0) (2020-07-11)
 
 

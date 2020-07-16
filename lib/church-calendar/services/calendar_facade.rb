@@ -22,23 +22,27 @@ module ChurchCalendar
 
     attr_reader :metadata
 
+    def perpetual_calendar_day(date)
+      @perpetual_calendar.day date.year, date.month, date.day, vespers: false, vigils: true
+    end
+
     def day(date)
-      @perpetual_calendar.day date
+      perpetual_calendar_day date
     end
 
     def days_of_month(year, month)
       month_enum = CR::Util::Month.new(year, month)
-      month_enum.collect {|date| @perpetual_calendar.day date }
+      month_enum.collect {|date| perpetual_calendar_day(date) }
     end
 
     def days_of_year(year)
       year_enum = CR::Util::Year.new(year)
-      year_enum.collect {|date| @perpetual_calendar.day date }
+      year_enum.collect {|date| perpetual_calendar_day(date) }
     end
 
     def days_between(start, stop)
       year_enum = DateRangeEnumerator.new(start, stop)
-      year_enum.collect {|date| @perpetual_calendar.day date }
+      year_enum.collect {|date| perpetual_calendar_day(date) }
     end
 
     def days_between_today_and_365

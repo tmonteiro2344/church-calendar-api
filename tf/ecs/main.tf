@@ -28,7 +28,7 @@ resource "aws_ecs_service" "main" {
 
 # define the iam target group along with alb rules and dns entries
 module "target_group" {
-  source = "git::https://gitlab.com/5stones/tf-modules//aws/lb/target-group?ref=v2.2.0"
+  source = "git::https://gitlab.com/5stones/tf-modules//aws/lb/target-group?ref=v2.3.2"
 
   name     = var.name
   hostname = var.hostname
@@ -44,7 +44,7 @@ module "target_group" {
 }
 
 module "autoscaling" {
-  source = "git::https://gitlab.com/5stones/tf-modules//aws/ecs/autoscaling?ref=v2.2.0"
+  source = "git::https://gitlab.com/5stones/tf-modules//aws/ecs/autoscaling?ref=v2.3.2"
 
   cluster = aws_ecs_service.main.cluster
   service = aws_ecs_service.main.name

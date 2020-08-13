@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v1.2.0...v1.2.1) (2020-08-13)
+
+
+### Bug Fixes
+
+* **tf:** fix issues with tf config ([7982adc](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/7982adc669bfb3c7a7e5912eea9a3eca1089711c))
+
+
+
 # [1.2.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v1.1.0...v1.2.0) (2020-07-16)
 
 

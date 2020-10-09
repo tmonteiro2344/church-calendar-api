@@ -38,6 +38,8 @@ us: &us
   sanctorale:
     - packaged: universal-en
     - packaged: us-en
+  temporale_extensions:
+    - ThanksgivingUS
   transfer_to_sunday:
     - epiphany
     - ascension

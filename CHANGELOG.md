@@ -1,3 +1,17 @@
+# [1.3.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v1.2.1...v1.3.0) (2020-10-09)
+
+
+### Bug Fixes
+
+* Epiphany is transferred to Sunday in the US ([88b8ba9](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/88b8ba92d22ba7bb58d43cefe23f0ad7c313c450))
+
+
+### Features
+
+* support Thanksgiving in US ([87ae55b](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/87ae55bb49baca2e2bdf637a95258daa418d2e32))
+
+
+
 ## [1.2.1](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v1.2.0...v1.2.1) (2020-08-13)
 
 

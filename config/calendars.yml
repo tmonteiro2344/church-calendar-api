@@ -39,6 +39,7 @@ us: &us
     - packaged: universal-en
     - packaged: us-en
   transfer_to_sunday:
+    - epiphany
     - ascension
     - corpus_christi
 
@@ -50,6 +51,7 @@ us-ascension: &us-ascension
   title: US Calendar (Boston, Hartford, New York, Newark, Omaha, and Philadelphia)
   description: These Diocese have retained its celebration on the proper Thursday
   transfer_to_sunday:
+    - epiphany
     - corpus_christi
 
 us-boston:

@@ -1,6 +1,6 @@
 {
   "name": "church-calendar-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Church Calendar API",
   "main": "index.js",
   "directories": {

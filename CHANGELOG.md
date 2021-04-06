@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.0.2...v2.1.0) (2021-04-06)
+
+
+### Features
+
+* Update calendarium-romanum to add St. Gregory of Narek and St. Hildegard of Bingen ([e947035](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/e947035026800c1017982bc853b0cb8019b80bba))
+
+
+
 ## [2.0.2](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.0.1...v2.0.2) (2021-02-12)
 
 

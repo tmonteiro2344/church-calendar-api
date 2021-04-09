@@ -1,3 +1,7 @@
+## [2.1.1](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.1.0...v2.1.1) (2021-04-09)
+
+
+
 # [2.1.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.0.2...v2.1.0) (2021-04-06)
 
 

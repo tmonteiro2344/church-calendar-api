@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Lumen-de-Lumine/calendarium-romanum
-  revision: fab860f26bb64dc53b435983c51f9ca4a9c0a094
+  revision: 1bac78f4090dc282d2bac7b46d2b9f1078644c52
   branch: master
   specs:
     calendarium-romanum (2.0.2)

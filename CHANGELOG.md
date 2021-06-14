@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.1.1...v2.2.0) (2021-06-14)
+
+
+### Features
+
+* **search:** :sparkles: Search titles using numeric ordinals (e.g., 33rd) as well as spelled out ordinals (e.g., thirty-third) ([#16](https://github.com/Lumen-de-Lumine/church-calendar-api/issues/16)) ([8201813](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/8201813bbb7e7d141a3f5e84869d7019563bfecf))
+
+
+
 ## [2.1.1](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.1.0...v2.1.1) (2021-04-09)
 
 

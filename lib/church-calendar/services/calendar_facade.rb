@@ -1,3 +1,5 @@
+require 'ordinalize_full/integer'
+
 module ChurchCalendar
   # perpetual calendar + additional methods + metadata
 
@@ -51,6 +53,23 @@ module ChurchCalendar
       days_between start, start + 365
     end
 
+    def spell_out_ordinals(string)
+      m = /\b(\d+)(?:th|st|nd|rd)/.match(string)
+      if !m
+        return string
+      end
+
+      ordinal = m[1].to_i.ordinalize_in_full.gsub(' ', '-')
+      string.gsub(m[0], ordinal)
+    end
+
+    def title_includes_query?(title, query)
+      title = title.downcase
+      query = query.downcase
+      title_with_spelled_out_ordinals = spell_out_ordinals title
+      title.include?(query) or title_with_spelled_out_ordinals.include?(query)
+    end
+
     def search_title(query)
       results = []
       all_result = days_between_today_and_365
@@ -60,7 +79,7 @@ module ChurchCalendar
       end
 
       all_result.each do |day|
-        matches = day.celebrations.select {|cel| cel.title.downcase.include?(query.downcase)}
+        matches = day.celebrations.select {|cel| title_includes_query?(cel.title, query.downcase)}
         if matches.length > 0
           results.push(CalendariumRomanum::Day.new(
             date: day.date,

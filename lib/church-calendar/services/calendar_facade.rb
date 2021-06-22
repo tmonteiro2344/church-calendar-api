@@ -47,9 +47,13 @@ module ChurchCalendar
       year_enum.collect {|date| perpetual_calendar_day(date) }
     end
 
-    def days_between_today_and_365
+    def today
       now = Time.now
-      start = Date.new now.year, now.month, now.day
+      Date.new now.year, now.month, now.day
+    end
+
+    def days_between_today_and_365
+      start = today
       days_between start, start + 365
     end
 
@@ -70,9 +74,15 @@ module ChurchCalendar
       title.include?(query) or title_with_spelled_out_ordinals.include?(query)
     end
 
-    def search_title(query)
+    def search_title(query, startDate, endDate)
+      if !startDate
+        startDate = today
+      end
+      if !endDate
+        endDate = startDate + 365
+      end
       results = []
-      all_result = days_between_today_and_365
+      all_result = days_between startDate, endDate
 
       if !query
         return all_result

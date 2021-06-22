@@ -1,3 +1,12 @@
+# [2.3.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.2.0...v2.3.0) (2021-06-22)
+
+
+### Features
+
+* **search:** :sparkles: Add startDate and endDate to allow search over specific dates for queries ([1b5fe40](https://github.com/Lumen-de-Lumine/church-calendar-api/commit/1b5fe406908f76eaa48fe005487df45bb0f45b81))
+
+
+
 # [2.2.0](https://github.com/Lumen-de-Lumine/church-calendar-api/compare/v2.1.1...v2.2.0) (2021-06-14)
 
 

@@ -98,12 +98,34 @@ module ChurchCalendar
               error! 'date does not have a valid value', 400
             end
 
+            begin
+              if params[:startDate]
+                startDate = Date.parse params[:startDate]
+              end
+            rescue ArgumentError
+              error! 'startDate does not have a valid value', 400
+            end
+
+            begin
+              if params[:endDate]
+                endDate = Date.parse params[:endDate]
+                if !params[:startDate]
+                  error! 'endDate cannot be given without startDate', 400
+                end
+                if endDate < startDate
+                  error! 'endDate cannot precede start date', 400
+                end
+              end
+            rescue ArgumentError
+              error! 'endDate does not have a valid value', 400
+            end
+
             result = []
             if date
               day = @calendar.day date
               result.push(day)
             else
-              result = @calendar.search_title params[:q]
+              result = @calendar.search_title params[:q], startDate, endDate
             end
 
             return present result, with: ChurchCalendar::Day

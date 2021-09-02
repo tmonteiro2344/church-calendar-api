@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/Lumen-de-Lumine/calendarium-romanum
-  revision: 0b9dcc6c6a4ad1a3cde80be23ad6e38a279817d8
+  revision: 0a5093ec19b9b8d5901abca9a013b4ccb55e8c14
   branch: master
   specs:
-    calendarium-romanum (2.0.3)
+    calendarium-romanum (2.0.4)
       i18n (~> 0.6)
       roman-numerals (~> 0.3)
       thor (~> 0.18)

@@ -32,6 +32,15 @@ general-es:
   sanctorale:
     - packaged: universal-es
 
+
+general-pt:
+  title: Calendário Romano Geral
+  language: pt
+  sanctorale:
+    - packaged: universal-pt
+
+
+
 us: &us
   title: US Calendar
   language: en

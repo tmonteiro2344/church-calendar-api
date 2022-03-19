@@ -63,6 +63,11 @@ describe ChurchCalendar::APIv0 do
         get '/api/v0/it/calendars/default/today'
         last_response.must_be :ok?
       end
+
+      it 'Portuguese' do
+        get '/api/v0/pt/calendars/default/today'
+        last_response.must_be :ok?
+      end
     end
 
     it 'unsupported language results in an error' do
@@ -78,7 +83,7 @@ describe ChurchCalendar::APIv0 do
       get '/api/v0/en/calendars'
       last_response.must_be :ok?
       dejson(last_response.body)
-        .must_equal %w(general-en general-la general-fr general-it czech czech-cechy czech-morava czech-pha czech-ltm czech-hk czech-cb czech-plz czech-olm czech-brn czech-oo default)
+        .must_equal %w(general-en general-la general-fr general-it general-pt czech czech-cechy czech-morava czech-pha czech-ltm czech-hk czech-cb czech-plz czech-olm czech-brn czech-oo default)
     end
 
     it 'all calendars work' do

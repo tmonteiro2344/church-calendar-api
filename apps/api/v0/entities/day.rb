@@ -19,7 +19,7 @@ module ChurchCalendar
     end
 
     def season
-      object.season.to_sym
+      object.season.name
     end
   end
 end

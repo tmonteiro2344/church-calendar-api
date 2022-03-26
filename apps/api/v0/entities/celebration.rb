@@ -16,7 +16,7 @@ module ChurchCalendar
     end
 
     def colour
-      object.colour.to_sym
+      object.colour.name
     end
   end
 end

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tmonteiro2344/calendarium-romanum
-  revision: debb9c04f85e461693c1972ed949bde8aa939e8c
+  revision: 952e7b0f845a2e696a316faca881b0cf8bb25eae
   branch: master
   specs:
     calendarium-romanum (2.0.4)
